@@ -12,3 +12,4 @@
 2. run `php artisan migrate:fresh --seed`
 3. run `php artisan shield:install --fresh`
 4. run `php artisan db:seed --class=RolleSeeder`
+5. run `php artisan db:seed --class=ShieldSeeder`
