@@ -13,3 +13,9 @@
 3. run `php artisan shield:install --fresh`
 4. run `php artisan db:seed --class=RoleSeeder`
 5. run `php artisan db:seed --class=ShieldSeeder`
+
+## Queries
+
+1. Users, roles and permissions
+2. How to handle answers database on edit of form content?
+3. How will data persist during collection? Will the agent make profile for everyone?

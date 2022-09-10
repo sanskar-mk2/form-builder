@@ -18,6 +18,7 @@ class Builder extends Component implements HasForms
     use InteractsWithForms;
 
     public $content = [];
+    public $title = "";
 
     public function mount()
     {
@@ -93,7 +94,10 @@ class Builder extends Component implements HasForms
 
     public function save(): void
     {
-        $form = \App\Models\Form::create($this->form->getState());
+        $form = new \App\Models\Form;
+        $form->content = $this->form->getState()['content'];
+        $form->title = $this->title;
+        $form->save();
 
         redirect()->route('form', ['form' => $form]);
     }

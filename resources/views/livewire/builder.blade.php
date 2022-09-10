@@ -1,5 +1,6 @@
 <div class="bg-gray-50 min-h-screen">
     <form wire:submit.prevent="save" class="p-8 space-y-8 max-w-4xl mx-auto">
+        <input wire:model="title" type="text" name="title" />
         <div class="p-8 bg-white shadow">
             {{ $this->form }}
         </div>
