@@ -11,5 +11,5 @@
 1. copy `.env.example` to `.env` and fill it out
 2. run `php artisan migrate:fresh --seed`
 3. run `php artisan shield:install --fresh`
-4. run `php artisan db:seed --class=RolleSeeder`
+4. run `php artisan db:seed --class=RoleSeeder`
 5. run `php artisan db:seed --class=ShieldSeeder`

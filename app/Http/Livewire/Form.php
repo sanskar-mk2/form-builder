@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Answer;
 use Filament\Forms\Components\Builder\Block;
 use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\FileUpload;
@@ -62,6 +63,9 @@ class Form extends Component implements HasForms
 
     public function submit(): void
     {
+        // $ans = new Answer();
+        // $ans->content = $this->form->getState();
+        // $ans->form_id = $this->formModel->id;
         dd($this->form->getState());
     }
 

@@ -2,21 +2,20 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\FormResource\Pages;
-use App\Filament\Resources\FormResource\RelationManagers;
-use App\Models\Form as ModelsForm;
+use App\Filament\Resources\AnswerResource\Pages;
+use App\Filament\Resources\AnswerResource\RelationManagers;
+use App\Models\Answer;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
-use Filament\Tables\Columns\TextColumn;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class FormResource extends Resource
+class AnswerResource extends Resource
 {
-    protected static ?string $model = ModelsForm::class;
+    protected static ?string $model = Answer::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 
@@ -32,7 +31,7 @@ class FormResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('id')
+                //
             ])
             ->filters([
                 //
@@ -45,21 +44,21 @@ class FormResource extends Resource
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
-
+    
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-
+    
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListForms::route('/'),
-            'create' => Pages\CreateForm::route('/create'),
-            'view' => Pages\ViewForm::route('/{record}'),
-            'edit' => Pages\EditForm::route('/{record}/edit'),
+            'index' => Pages\ListAnswers::route('/'),
+            'create' => Pages\CreateAnswer::route('/create'),
+            'view' => Pages\ViewAnswer::route('/{record}'),
+            'edit' => Pages\EditAnswer::route('/{record}/edit'),
         ];
-    }
+    }    
 }
